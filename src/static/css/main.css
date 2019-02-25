@@ -1,4 +1,4 @@
-body
+#navbar ul
 {
-    background: red;
+    list-style: none;
 }

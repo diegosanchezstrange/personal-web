@@ -12,3 +12,22 @@ new Vue({
     },
     delimiters: ["${","}"]
 })
+
+new Vue({
+
+    el: "#app",
+
+    methods: {
+
+        changeNavbarState : function()
+        {
+            console.log("ok");
+            let nv = document.getElementById("navbar");
+            nv.style.width = "250px"
+        }
+
+    },
+
+    delimiters: ["${","}"]
+
+})

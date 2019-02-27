@@ -1,4 +1,42 @@
-#navbar ul
+body
+{
+    background-color: aliceblue;
+}
+
+#navButton
+{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+#navbar 
 {
     list-style: none;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+#navbar li
+{
+    font-size: 25px;
+    transition: 0.3s;
+    display: block;
+}
+
+#navbar li:hover
+{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-height:450px)
+{
+
 }

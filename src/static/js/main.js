@@ -1,33 +1,16 @@
+let openButton = document.getElementById("navOpeningButton");
+let closeButton = document.getElementById("navClosingButton");
 
-console.log("it works")
+openButton.addEventListener("click", function () 
+{
+    let navBar = document.getElementById("mainNavbar");
+    navBar.style.padding = "15px";
+    navBar.style.width = "250px";
+}, false);
 
-new Vue({
-    el: "#navbar",
-    data: {
-        pages: [
-            {text:"Home"},
-            {text:"Projects"},
-            {text:"Posts"}
-        ]
-    },
-    delimiters: ["${","}"]
-})
-
-new Vue({
-
-    el: "#app",
-
-    methods: {
-
-        changeNavbarState : function()
-        {
-            console.log("ok");
-            let nv = document.getElementById("navbar");
-            nv.style.width = "250px"
-        }
-
-    },
-
-    delimiters: ["${","}"]
-
-})
+closeButton.addEventListener("click", function () 
+{
+    let navBar = document.getElementById("mainNavbar");
+    navBar.style.padding = "0";
+    navBar.style.width = "0";
+}, false);

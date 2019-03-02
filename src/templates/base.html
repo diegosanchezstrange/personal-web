@@ -13,20 +13,27 @@
 
 <body>
 
-    <div id="app">
-        <button id="navButton" v-on:click="changeNavbarState"><span class="">Buenas</span></button>
+    <div id="container">
 
-        <ul id="navbar">
-            <li v-for="page in pages">
-                ${page.text}
-            </li>
-        </ul>
+        <button id="navOpeningButton"><img src="../static/icons/navbarOpeningIcon.svg" alt=""></button>
+
+        <div id="mainNavbar" >
+            <button id="navClosingButton" ><span>Cierrate</span></button>
+            <ul>
+                <li v-for="page in pages">
+                    ${page.text}
+                </li>
+            </ul>
+        </div>
+
+        {% block body %}
+        {% endblock %}
+
+
     </div>
 
 
-    {% block body %}
-    {% endblock %}
-
+    <script src="{{ url_for('static', filename='js/mainVue.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 

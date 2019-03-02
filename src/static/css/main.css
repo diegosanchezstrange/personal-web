@@ -1,42 +1,50 @@
 body
 {
-    background-color: aliceblue;
+    margin: 0;
+
 }
 
-#navButton
+#navOpeningButton
 {
     position: absolute;
     top: 5%;
     left: 5%;
+    background: none;
+    border: none;
 }
 
-#navbar 
+#navClosingButton
+{
+    float: right;
+}
+
+#mainNavbar
 {
     list-style: none;
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 0;
-    position: fixed;
-    top: 0;
+    position: fixed; 
     left: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; 
     transition: 0.5s;
-}
 
-#navbar li
+    /*box-shadow: 1px 1px 1px grey;*/
+    background-color: rgba(2,2,2,0.1);
+    color: white;
+} 
+
+#mainNavbar li
 {
     font-size: 25px;
     transition: 0.3s;
     display: block;
 }
 
-#navbar li:hover
+#mainNavbar li:hover
 {
     color: white;
     background-color: black;
     cursor: pointer;
-}
-
-@media screen and (max-height:450px)
-{
-
-}
+} 

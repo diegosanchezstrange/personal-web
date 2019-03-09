@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Diego's portafolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="{{ url_for('static' , filename='css/main.css') }}">
 
 </head>
@@ -14,11 +13,10 @@
 <body>
 
     <div id="container">
+        <button id="navOpeningButton" v-on:click="changeNavbarState"><img src="../static/icons/navbarOpeningIcon.svg" alt=""></button>
 
-        <button id="navOpeningButton"><img src="../static/icons/navbarOpeningIcon.svg" alt=""></button>
-
-        <div id="mainNavbar" >
-            <button id="navClosingButton" ><span>Cierrate</span></button>
+        <div id="mainNavbar" :style="[visible ? visibleStyle:null]">
+            <button id="navClosingButton" v-on:click="changeNavbarState"><span>Cierrate</span></button>
             <ul>
                 <li v-for="page in pages">
                     ${page.text}
@@ -28,13 +26,11 @@
 
         {% block body %}
         {% endblock %}
-
-
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.8/dist/vue.js"></script>
     <script src="{{ url_for('static', filename='js/mainVue.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 
 </html>

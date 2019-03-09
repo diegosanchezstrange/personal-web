@@ -1,7 +1,17 @@
-let vNavbar = new Vue({
-    el: "#mainNavbar",
-    data: {
-        pages: [{
+let vNavbar = new Vue(
+{
+    el: "#container",
+    data: 
+    {
+        visible: false,
+        visibleStyle: 
+        {
+            padding: "15px",
+            width: "250px"
+        },
+        pages: 
+        [
+            {
                 text: "Home"
             },
             {
@@ -11,6 +21,16 @@ let vNavbar = new Vue({
                 text: "Posts"
             }
         ]
+    },
+    methods: 
+    {
+
+        changeNavbarState() 
+        {
+           this.visible = !this.visible; 
+           console.log("funciona");
+        }
+
     },
     delimiters: ["${", "}"]
 })
